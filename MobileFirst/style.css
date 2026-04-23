@@ -1,0 +1,117 @@
+@import url('https://fonts.cdnfonts.com/css/tt-lakes-neue-trial');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'TT Lakes Neue Trial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 320px;
+    height: 597px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 88px;
+    background-color: #ffffff;
+}
+
+.burger {
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.logo {
+    padding-right: 20px;
+}
+
+.nav--stick {
+    content: "";
+    border: 1px solid #eaeaea;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.repair {
+    cursor: pointer;
+}
+
+.check--status {
+padding-left: 20px;
+cursor: pointer;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    width: 320px;
+    height: 509px;
+}
+
+.servise {
+    display: flex;
+}
+
+.h2--stick {
+    content: "";
+    border: 2px solid #41f6d7;
+    height: 40px;
+    margin-right: 20px;
+    margin-top: 25px;
+    border-radius: 0 20px 20px 0;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+.slide--menu {
+    display: flex;
+    overflow-x: scroll;
+    gap: 50px;
+    padding-left: 30px;
+    height: 40px;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #7e7e82;
+} 
+
+.pc--version {
+    display: none;
+}
+
+.slide--menu div:nth-child(2) {
+    border: 2px solid #41f6d7;
+    border-radius: 5px;
+}
+
+.inside--text {
+    width: 288px;
+    height: 90px;
+    font-size: 14px;
+    margin: 15px;
+    font-weight: 400px;
+    margin-bottom: 30px;
+}
+
+.read--more {
+    display: flex;
+    margin-left: 15px;
+    gap: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.img--logo {
+    width: 320px;
+    height: 176px;
+}
