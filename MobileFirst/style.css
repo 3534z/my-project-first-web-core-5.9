@@ -5,23 +5,26 @@
 }
 body {
     font-family: 'TT Lakes Neue Trial', sans-serif;
-    display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    width: 320px;
-    height: 597px;
+    display: grid;
+    grid-template-columns: 1;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100vh;
 }
 
 nav {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 320px;
-    height: 88px;
+    padding: 12px 16px;
     background-color: #ffffff;
+    width: 100%;
 }
 
 .burger {
@@ -53,11 +56,10 @@ cursor: pointer;
     display: flex;
     flex-direction: column;
     background-color: #f8f8f8;
-    width: 320px;
-    height: 509px;
+    width: 100%;
 }
 
-.servise {
+.service {
     display: flex;
 }
 
@@ -76,31 +78,53 @@ h2 {
 
 .slide--menu {
     display: flex;
+    align-items: center;
     overflow-x: scroll;
-    gap: 50px;
-    padding-left: 30px;
+    gap: 30px;
+    padding-left: 20px;
+    width: 100%;
     height: 40px;
     white-space: nowrap;
     cursor: pointer;
     color: #7e7e82;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 16px;
 } 
 
 .pc--version {
     display: none;
 }
 
-.slide--menu div:nth-child(2) {
-    border: 2px solid #41f6d7;
+.mobile--version {
+    border: 2px solid #B8FFEC;
     border-radius: 5px;
+    padding: 7px 7px;
+    background-color: #ffffff;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
 }
 
 .inside--text {
+    font-size: 14px;
+    margin: 15px;
+    font-weight: 400px;
+    margin-bottom: 30px;
+    color: #1B1C21;
+}
+
+.tablet--version {
+    display: none;
     width: 288px;
     height: 90px;
     font-size: 14px;
     margin: 15px;
     font-weight: 400px;
     margin-bottom: 30px;
+    color: #1B1C21;
 }
 
 .read--more {
@@ -111,7 +135,61 @@ h2 {
     cursor: pointer;
 }
 
+.read--more img { 
+    width: 24px;
+    height: 24px;
+}
+
 .img--logo {
-    width: 320px;
+    width: 100%;
     height: 176px;
+}
+
+
+@media (min-width: 768px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "text1  image"
+            "text2  image"
+            "readmore image";
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .inside--text {
+        grid-area: text1;
+        width: 100%;
+        margin: 0;
+    }
+
+    .tablet--version {
+        display: block;
+        grid-area: text2;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .read--more {
+        grid-area: readmore;
+        margin-left: 0;
+    }
+
+    .img--logo {
+        grid-area: image;
+        width: 100%;
+        height: 100%;
+    }
+
+    .img--logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .slide--menu {
+        width: 100%;
+    }
 }
