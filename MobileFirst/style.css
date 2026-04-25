@@ -36,7 +36,7 @@ nav {
     padding-right: 20px;
 }
 
-.nav--stick {
+.nav__stick {
     content: "";
     border: 1px solid #eaeaea;
     height: 30px;
@@ -44,12 +44,22 @@ nav {
 }
 
 .repair {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     cursor: pointer;
 }
 
 .check--status {
-padding-left: 20px;
-cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.nav__tablet--version {
+    display: none;
 }
 
 .content {
@@ -61,19 +71,34 @@ cursor: pointer;
 
 .service {
     display: flex;
+    align-items: center;
 }
 
 .h2--stick {
+    margin-bottom: 20px;
     content: "";
     border: 2px solid #41f6d7;
     height: 40px;
     margin-right: 20px;
-    margin-top: 25px;
+    margin-top: 20px;
     border-radius: 0 20px 20px 0;
 }
 
 h2 {
     font-size: 28px;
+    margin-right: auto;
+}
+
+.service__pc-version {
+    display: none;
+}
+
+.service__repair {
+    display: none;
+}
+
+.service__check--status {
+    display: none;
 }
 
 .slide--menu {
@@ -96,11 +121,15 @@ h2 {
     display: none;
 }
 
-.mobile--version {
+.slide--menu div:nth-child(2) {
     border: 2px solid #B8FFEC;
     border-radius: 5px;
     padding: 7px 7px;
     background-color: #ffffff;
+}
+
+.review {
+    display: none;
 }
 
 .grid {
@@ -118,13 +147,10 @@ h2 {
 
 .tablet--version {
     display: none;
-    width: 288px;
-    height: 90px;
-    font-size: 14px;
-    margin: 15px;
-    font-weight: 400px;
-    margin-bottom: 30px;
-    color: #1B1C21;
+}
+
+.grid__pc--version {
+    display: none;
 }
 
 .read--more {
@@ -145,8 +171,12 @@ h2 {
     height: 176px;
 }
 
+.br--radius {
+    border-radius: 0;
+   }
 
-@media (min-width: 768px) {
+
+@media(min-width: 768px) {
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -162,6 +192,8 @@ h2 {
         grid-area: text1;
         width: 100%;
         margin: 0;
+        margin-left: 6px;
+        padding-right: 40px;
     }
 
     .tablet--version {
@@ -169,7 +201,10 @@ h2 {
         grid-area: text2;
         width: 100%;
         height: 100%;
+        font-size: 14px;
+        color: #1B1C21;
         margin: 0;
+        margin-left: 6px;
     }
 
     .read--more {
@@ -192,4 +227,139 @@ h2 {
     .slide--menu {
         width: 100%;
     }
+
+    .nav__tablet--version {
+        display: flex;
+    }
+
+    .call {
+        margin-left: 20px;
+
+    }
+
+    .repair .check--status {
+        margin-right: auto;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .nav__stick1 {
+    content: "";
+    border: 1px solid #eaeaea;
+    height: 30px;
+    margin-right: 20px;
+    }
+
+    .call {
+        padding-right: 20px;
+    }
+
+    .chat {
+        padding-right: 20px;
+    }
+
+    .profile {
+        padding-right: 20px;
+    }
+
+    .br--radius {
+    border-radius: 5px;
+   }
+}
+
+@media(min-width: 1120px) {
+    nav {
+        display: none;
+    }
+
+    .service__pc-version {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    }
+
+    .service__repair {
+    display: flex;
+    margin-right: 30px;
+    }
+
+   .service__check--status {
+    display: flex;
+    margin-right: 30px;
+   }
+
+   .content {
+    padding-top: 20px;
+   }
+
+   .tablet--version {
+    display: none;
+   }
+
+   .grid__pc--version {
+    display: flex;
+    font-size: 14px;
+    font-weight: 400px;
+    color: #1B1C21;
+    padding-right: 17px;
+    margin-left: 25px;
+   }
+
+   .review {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    cursor: pointer;
+    color: #7e7e82;
+    margin: 7px;
+    font-weight: 500;
+    font-size: 16px;
+   }
+
+   .read--more {
+    padding-bottom: 80px;
+    margin-left: 25px;
+   }
+
+   .br--radius {
+    border-radius: 5px;
+   }
+
+   .inside--text {
+    padding-top: 10px;
+    margin-left: 25px;
+    padding-right: 60px;
+   }
+
+   .slide--menu div:first-child {
+    display: flex;
+    border: 2px solid #B8FFEC;
+    border-radius: 5px;
+    padding: 7px 7px;
+    background-color: #ffffff;
+   }
+
+   .pc--version {
+    display: flex;
+   }
+
+   .slide--menu div:nth-child(2) {
+    border: none;
+    background-color:#f8f8f8 ;
+   }
+   
+   .none--pc {
+    display: none;
+   }
+
+   h2 {
+    padding-left: 10px;
+   }
+
+   .slide--menu {
+    padding-left: 35px;
+   }
+
 }
